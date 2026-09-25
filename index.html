@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF7F2">
+  <meta name="description" content="8問でわかる！あなたが最初に整えたいポイント">
+  <title>40代からの食べ痩せタイプ診断</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--APP-START-->
+<main class="app" id="app">
+
+  <!-- スタート画面 -->
+  <section class="screen screen-start" id="screen-start">
+    <div class="start-mark" aria-hidden="true">
+      <span>🍚</span><span>🍰</span><span>👟</span><span>😴</span><span>🫶</span>
+    </div>
+    <p class="start-kicker" id="start-subtitle-small"></p>
+    <h1 class="start-title" id="start-title"></h1>
+    <p class="start-subtitle" id="start-subtitle"></p>
+    <div class="start-copy">
+      <p class="start-lead" id="start-lead"></p>
+      <p class="start-body" id="start-body"></p>
+    </div>
+    <button type="button" class="btn-primary" id="start-button"></button>
+    <p class="start-note" id="start-note"></p>
+  </section>
+
+  <!-- 質問画面 -->
+  <section class="screen screen-question" id="screen-question" hidden>
+    <header class="q-header">
+      <button type="button" class="btn-back" id="back-button" aria-label="前の画面に戻る">
+        <span aria-hidden="true">‹</span> 戻る
+      </button>
+      <p class="q-count"><span id="q-current">1</span><span class="q-count-sep"> / </span><span id="q-total">8</span></p>
+    </header>
+    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="1" id="progress">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="q-body" id="q-body">
+      <p class="q-label" id="q-label">Q1</p>
+      <h2 class="q-text" id="q-text"></h2>
+      <div class="options" id="options"></div>
+    </div>
+  </section>
+
+  <!-- 結果画面 -->
+  <section class="screen screen-result" id="screen-result" hidden>
+    <div class="result-card" id="result-card">
+      <p class="result-kicker" id="result-heading"></p>
+      <div class="result-emoji" id="result-emoji" aria-hidden="true"></div>
+      <h2 class="result-type" id="result-type"></h2>
+      <p class="result-sub" id="result-sub"></p>
+
+      <div class="result-text" id="result-text"></div>
+
+      <div class="result-step">
+        <p class="result-step-label" id="result-step-label"></p>
+        <p class="result-step-text" id="result-step-text"></p>
+      </div>
+
+      <div class="bars">
+        <p class="bars-title" id="bars-title"></p>
+        <ul class="bars-list" id="bars-list"></ul>
+        <p class="bars-note" id="bars-note"></p>
+      </div>
+
+      <p class="result-brand" id="result-brand"></p>
+    </div>
+
+    <p class="result-closing" id="result-closing"></p>
+
+    <div class="cta" id="cta" hidden>
+      <p class="cta-lead" id="cta-lead"></p>
+      <a class="btn-primary" id="cta-link" href="#" target="_blank" rel="noopener"></a>
+    </div>
+
+    <button type="button" class="btn-ghost" id="retry-button"></button>
+    <p class="disclaimer" id="disclaimer"></p>
+  </section>
+
+</main>
+<!--APP-END-->
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
